@@ -1,0 +1,9 @@
+smartmeter:
+        build: .
+        restart: always
+        volumes:
+                - ./custom:/srv/app/sm-linux-light-full-1.4.0/custom
+                - ./logs:/srv/app/sm-linux-light-full-1.4.0/logs
+                - ./results:/srv/app/sm-linux-light-full-1.4.0/results
+        command: /srv/app/sm-linux-light-full-1.4.0/custom/test.jmx
+
